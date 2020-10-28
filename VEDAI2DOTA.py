@@ -69,10 +69,10 @@ def check_annotations(file_name, img_dir, ann_dir, show=True, outputdir=None):
         f.write('gsd: -1\n')
         f.write('\n'.join(ann_list))
         
-    # output_images_dir = os.path.join(output_dir, 'images/')
-    # os.makedirs(output_images_dir, exist_ok=True)
-    # copyfile(img_dir + colored_img, output_images_dir + 'vedai_' + colored_img)
-    # copyfile(img_dir + ir_img, output_images_dir + 'vedai_' + ir_img)
+    output_images_dir = os.path.join(output_dir, 'images/')
+    os.makedirs(output_images_dir, exist_ok=True)
+    copyfile(img_dir + colored_img, output_images_dir + 'vedai_' + colored_img)
+    copyfile(img_dir + ir_img, output_images_dir + 'vedai_' + ir_img)
     
     return
         
