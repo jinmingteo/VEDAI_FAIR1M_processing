@@ -26,7 +26,6 @@ def check_annotations(file_name, img_dir, ann_dir, show=True, outputdir=None):
         23: 'boat'
     }
     
-    # filter_options = ['car', 'truck', 'van', 'plane', 'boat']
     ann_list = []
     colored_img = cv2.imread(colored_img)
     ir_img = cv2.imread(ir_img)
