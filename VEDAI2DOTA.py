@@ -32,7 +32,7 @@ def check_annotations(file_name, img_dir, ann_dir, show=True, outputdir=None):
     }
     
     filter_options = ['car', 'truck', 'van', 'plane']
-    convert_options = {'car': 'small-vehicle', 'truck': 'large-vehicle', 'van': 'large-vehicle', 'plane': 'plane'}
+    convert_options = {'car': 'vehicle', 'truck': 'vehicle', 'van': 'vehicle', 'plane': 'plane'}
     
     ann_list = []
     has_filtered_items = False
@@ -60,13 +60,13 @@ def check_annotations(file_name, img_dir, ann_dir, show=True, outputdir=None):
     label_dir = os.path.join(output_dir, 'orig_labelTxt/')
     os.makedirs(label_dir, exist_ok=True)
     with open(label_dir + 'vedai_' + colored_img.replace('.png', '.txt'), 'w') as f:
-        f.write('imagesource: VEDAI\n')
-        f.write('gsd: -1\n')
+        # f.write('imagesource: VEDAI\n')
+        # f.write('gsd: -1\n')
         f.write('\n'.join(ann_list))
     
     with open(label_dir + 'vedai_' + ir_img.replace('.png', '.txt'), 'w') as f:
-        f.write('imagesource: VEDAI\n')
-        f.write('gsd: -1\n')
+        # f.write('imagesource: VEDAI\n')
+        # f.write('gsd: -1\n')
         f.write('\n'.join(ann_list))
         
     output_images_dir = os.path.join(output_dir, 'images/')
